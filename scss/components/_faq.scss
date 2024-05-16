@@ -1,0 +1,85 @@
+.faq {
+  text-align: center;
+  background-color: $first-bg;
+  padding: 2rem 0;
+
+  @media screen and (min-width: 768px) {
+    padding: 3rem 0;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 4rem 0;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: $call-font-color;
+    margin: 0 auto 1.5rem;
+    text-transform: uppercase;
+
+    @media screen and (min-width: 768px) {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 3rem;
+    }
+  }
+  &__accordion {
+    list-style: none;
+    margin: 4rem auto;
+  }
+  &__accordion--item {
+    text-align: start;
+    background: #fff;
+    border-top: 1px solid grey;
+
+    padding: 0.5rem;
+
+    @media screen and (min-width: 768px) {
+      padding: 1rem;
+    }
+    @media screen and (min-width: 1200px) {
+      padding: 1.5rem;
+    }
+  }
+  &__accordion--label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    font-weight: 400;
+    cursor: pointer;
+
+    @media screen and (min-width: 768px) {
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 1.7rem;
+      font-weight: 600;
+    }
+  }
+  &__accordion--label + input[type="radio"] {
+    display: none;
+  }
+
+  &__accordion--span {
+    transform: rotate(90deg);
+    font-size: 2rem;
+    color: $reviews-desc-bg;
+  }
+  &__accordion--thumb {
+  }
+  &__accordion--content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+  }
+  &__accordion--label + input[type="radio"]:checked + .faq__accordion--content {
+    max-height: 40rem;
+  }
+}

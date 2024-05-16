@@ -1939,6 +1939,7 @@ a {
 
 .about {
   position: relative;
+  background-color: #E9E9E9;
 }
 .about__banner {
   position: absolute;
@@ -1986,21 +1987,46 @@ a {
 
 .advantures {
   text-align: center;
-  padding: 0;
   margin: 0;
+  padding: 2rem 0;
+  background-color: #81939F;
+}
+@media screen and (min-width: 768px) {
+  .advantures {
+    padding: 3rem 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .advantures {
+    padding: 4rem 0;
+  }
 }
 .advantures__description {
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.62;
-  color: #1f2732;
+  color: #d7d7d7;
 }
-.advantures__tittle {
-  font-size: 2.5rem;
+.advantures__title {
+  font-size: 1.5rem;
   font-weight: 400;
   color: #1f2732;
-  margin: 0 auto;
+  margin: 0 auto 1.5rem;
   text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+  .advantures__title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .advantures__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+  }
 }
 .advantures__list {
   justify-content: center;
@@ -2009,6 +2035,11 @@ a {
   margin: 0;
   max-width: 100%;
 }
+@media screen and (max-width: 767px) {
+  .advantures__list :not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
 @media screen and (min-width: 768px) {
   .advantures__list {
     display: flex;
@@ -2016,7 +2047,7 @@ a {
   }
 }
 .advantures__items {
-  border: 1px solid #909090;
+  border: 1px solid #fff;
   border-radius: 1rem;
   height: 14rem;
   text-align: start;
@@ -2025,11 +2056,11 @@ a {
 @media screen and (min-width: 768px) {
   .advantures__items {
     width: 22rem;
+    margin: 0.5rem;
   }
 }
 @media screen and (min-width: 1200px) {
   .advantures__items {
-    margin: 0.5rem;
     width: 14rem;
   }
 }
@@ -2037,7 +2068,7 @@ a {
   height: 3rem;
   width: 3rem;
 }
-.advantures__items-tittle {
+.advantures__items-title {
   margin: 1rem 0;
   font-size: 1rem;
   font-weight: 400;
@@ -2050,4 +2081,275 @@ a {
   font-weight: 300;
   line-height: 1.12;
   color: #1f2732;
+}
+.advantures__button {
+  margin-top: 1rem;
+  width: 11rem;
+  height: 2rem;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  background-color: #edc114;
+  border: 1px solid #edc114;
+  border-radius: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .advantures__button {
+    margin-top: 2rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .advantures__button {
+    margin-top: 3rem;
+  }
+}
+
+.services {
+  text-align: center;
+  background-color: #E9E9E9;
+  padding: 2rem 0;
+}
+@media screen and (min-width: 768px) {
+  .services {
+    padding: 3rem 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .services {
+    padding: 4rem 0;
+  }
+}
+.services__title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #1f2732;
+  margin: 0 auto 1.5rem;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+  .services__title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .services__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+  }
+}
+.services__list {
+  justify-content: center;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .services__list {
+    gap: 1rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .services__list {
+    gap: 2rem;
+  }
+}
+.services__thumb {
+  width: 20rem;
+  height: 15rem;
+  background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/example.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.questions {
+  text-align: center;
+  margin: 0;
+  padding: 2rem 0;
+  background-color: #81939F;
+}
+@media screen and (min-width: 768px) {
+  .questions {
+    padding: 3rem 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .questions {
+    padding: 6rem 0;
+  }
+}
+.questions__title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #1f2732;
+  margin: 0 auto 1.5rem;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+  .questions__title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .questions__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+  }
+}
+.questions__description {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #1f2732;
+  margin: 0 auto 2rem;
+}
+@media screen and (min-width: 768px) {
+  .questions__description {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 3rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .questions__description {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 4rem;
+  }
+}
+.questions__flex {
+  margin-bottom: 1rem;
+}
+.questions__input {
+  width: 15rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+}
+.questions__button {
+  margin-top: 1rem;
+  width: 15rem;
+  height: 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: #edc114;
+  border: 1px solid #edc114;
+  border-radius: 0.5rem;
+}
+.questions__description--end {
+  font-size: 0.5rem;
+  font-weight: 300;
+  color: #d7d7d7;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .questions__description--end {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .questions__description--end {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+}
+
+.faq {
+  text-align: center;
+  background-color: #E9E9E9;
+  padding: 2rem 0;
+}
+@media screen and (min-width: 768px) {
+  .faq {
+    padding: 3rem 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .faq {
+    padding: 4rem 0;
+  }
+}
+.faq__title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #1f2732;
+  margin: 0 auto 1.5rem;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+  .faq__title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .faq__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+  }
+}
+.faq__accordion {
+  list-style: none;
+  margin: 4rem auto;
+}
+.faq__accordion--item {
+  text-align: start;
+  background: #fff;
+  border-top: 1px solid grey;
+  padding: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .faq__accordion--item {
+    padding: 1rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .faq__accordion--item {
+    padding: 1.5rem;
+  }
+}
+.faq__accordion--label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .faq__accordion--label {
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .faq__accordion--label {
+    font-size: 1.7rem;
+    font-weight: 600;
+  }
+}
+.faq__accordion--label + input[type=radio] {
+  display: none;
+}
+.faq__accordion--span {
+  transform: rotate(90deg);
+  font-size: 2rem;
+  color: #2e3947;
+}
+.faq__accordion--content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+.faq__accordion--label + input[type=radio]:checked + .faq__accordion--content {
+  max-height: 40rem;
 }/*# sourceMappingURL=main.css.map */
