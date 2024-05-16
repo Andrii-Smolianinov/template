@@ -1,0 +1,251 @@
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(255, 255, 255, 0.2);
+
+  &__wrapp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    @media screen and (max-width: 767px) {
+      justify-content: space-between;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      align-items: center;
+    }
+    @media screen and (min-width: 1200px) {
+      align-items: center;
+    }
+  }
+  
+  &--fixed{
+      background: rgba(255, 255, 255, 1);
+  }
+}
+
+.header__nav {
+  @include mq(tablet-only) {
+    /*order: 1;
+    width: 100%;*/
+    display: none;
+  }
+
+  @include mq(mobile-only) {
+    display: none;
+  }
+}
+
+.nav__list {
+  @include mq(tablet) {
+  }
+
+  @include mq(desktop) {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+  }
+
+  gap: 20px;
+}
+
+.nav__link {
+  @include mq(desktop) {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 900;
+  }
+
+  position: relative;
+  display: inline-block;
+  color: #000;
+  font-size: 32px;
+  line-height: 2;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: #151515;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  &:hover:before {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+  }
+  &:before {
+    position: absolute;
+    content: '';
+    bottom: -8px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background: $accent-color;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(5px);
+    transition: all 0.2s ease;
+  }
+}
+
+.header-contacts {
+  @include mq(tablet) {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  @include mq(desktop) {
+    display: flex;
+    gap: 20px;
+  }
+  
+  &__text{
+    text-align: right;
+    font-size: 14px;
+    
+    @include mq(mobile-only) {
+        display: none;    
+    }
+  }
+  
+  &__link{
+    @include mq(mobile-only) {
+       font-size: 14px;     
+    }  
+  }
+  
+  &__wrapp{
+    display: flex;
+    gap: 20px;
+    
+    @include mq(mobile-only) {
+        gap: 0;
+        flex-direction: column;    
+    }
+  }
+}
+
+.header-contacts__item {
+  @include mq(mobile-only) {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  @include mq(tablet-only) {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  align-items: center;
+  display: flex;
+}
+
+.header-contacts__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 12px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  transition-property: background-color;
+  color: #000;
+  background-color: rgba(0, 0, 0, 0.1);
+  
+  @include mq(mobile-only) {
+      display: none;
+  }
+}
+
+.header-contacts__link {
+  color: #000;
+  position: relative;
+  display: block;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.burger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    border-radius: 10px;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    padding: 0.5rem 0.75rem;
+    color: #181819;
+    background: #ffffff;
+    border: 1px solid rgba(33,33,33,.2);
+    transform: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @include mq(mobile-only) {
+        margin-left: 0; 
+    }
+
+    @include mq(tablet-only) {
+        margin-left: 0;
+    }
+
+    @include mq(desktop) {
+        display: none;
+    }
+}
+
+
+.burger__icon {
+  @include side-sizes(30px, 30px);
+
+  &:hover,
+  &:focus {
+    color: #edc114;
+  }
+}
+
+.burger__icon-open {
+  visibility: visible;
+  opacity: 1;
+
+  .burger.burger--active & {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.burger__icon-close {
+  .burger.burger--active & {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .burger & {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+:target{
+    scroll-margin-top: 120px;
+}
+
+.logo{
+    height: 70px;
+}
