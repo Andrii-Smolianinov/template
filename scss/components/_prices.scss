@@ -1,8 +1,7 @@
-.questions {
+.prices {
+  background-color: $second-bg;
   text-align: center;
-  margin: 0;
   padding: 2rem 0;
-  background-color: $first-bg;
 
   @media screen and (min-width: 768px) {
     padding: 3rem 0;
@@ -33,30 +32,42 @@
   &__description {
     font-size: 1rem;
     font-weight: 300;
-    color: $call-font-color;
-    margin: 0 auto 2rem;
+    line-height: 1.62;
+    max-width: 60%;
+    margin: 0 auto 1rem;
+    color: $font-second-color;
 
     @media screen and (min-width: 768px) {
-      font-size: 1.5rem;
-      font-weight: 400;
-      margin-bottom: 3rem;
+      margin-bottom: 2rem;
     }
     @media screen and (min-width: 1200px) {
-      font-size: 2rem;
-      font-weight: 500;
-      margin-bottom: 4rem;
+      margin-bottom: 3rem;
     }
   }
-  
-  &__input {
-    width: 15rem;
-    height: 2rem;
-    border-radius: 0.5rem;
+
+  &__table,
+  tr,
+  td {
+    padding: 0.5rem;
+    margin: 0 auto;
+    border: 1px solid $table-color;
+    border-collapse: collapse;
+    font-size: 1rem;
+    font-weight: 700;
+
+    @media screen and (min-width: 768px) {
+      padding: 0.7rem;
+      margin-top: 1.5rem;
+    }
+    @media screen and (min-width: 1200px) {
+      padding: 1rem;
+      margin-top: 2rem;
+    }
   }
 
   &__button {
     margin: 1rem 0 0 0;
-    width: 15rem;
+    width: 8rem;
     height: 2.3rem;
     font-size: 1rem;
     font-weight: 500;
@@ -65,26 +76,11 @@
     border: 1px solid $accent-color;
     border-radius: 0.5rem;
 
-    @media screen and (min-width: 992px) {
-      margin: 0 0 0 1rem;
-    }
-  }
-  
-  &__description--end {
-    font-size: 0.5rem;
-    font-weight: 300;
-    color: $call-font-color;
-    margin: 1rem auto 0;
-
     @media screen and (min-width: 768px) {
-      margin-top: 1.5rem;
-      font-size: 1rem;
-      font-weight: 400;
+      margin-top: 2rem;
     }
     @media screen and (min-width: 1200px) {
-      margin-top: 2rem;
-      font-size: 1.5rem;
-      font-weight: 500;
+      margin-top: 3rem;
     }
   }
 }

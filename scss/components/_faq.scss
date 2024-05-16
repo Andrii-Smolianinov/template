@@ -1,6 +1,6 @@
 .faq {
   text-align: center;
-  background-color: $first-bg;
+  background-color: $second-bg;
   padding: 2rem 0;
 
   @media screen and (min-width: 768px) {
@@ -28,58 +28,77 @@
       margin-bottom: 3rem;
     }
   }
-  &__accordion {
-    list-style: none;
-    margin: 4rem auto;
-  }
-  &__accordion--item {
-    text-align: start;
-    background: #fff;
-    border-top: 1px solid grey;
 
-    padding: 0.5rem;
+  &__accordion {
+    padding: 0;
+    margin: 1rem auto;
 
     @media screen and (min-width: 768px) {
-      padding: 1rem;
+      margin: 2rem auto;
     }
     @media screen and (min-width: 1200px) {
-      padding: 1.5rem;
+      margin: 3rem auto;
     }
   }
-  &__accordion--label {
+
+  &__accordion li {
+    text-align: justify;
+    list-style: none;
+    width: 95%;
+    background-color: #fff;
+  }
+
+  &__accordion li label {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    padding: 0.6rem;
     font-size: 0.8rem;
-    font-weight: 400;
+    font-weight: 600;
+    border-top: 1px solid #81939f;
+    background-color: $first-bg;
     cursor: pointer;
 
     @media screen and (min-width: 768px) {
-      font-size: 1.3rem;
-      font-weight: 500;
+      font-size: 1rem;
+      font-weight: 700;
     }
     @media screen and (min-width: 1200px) {
-      font-size: 1.7rem;
-      font-weight: 600;
+      font-size: 1.5rem;
     }
   }
-  &__accordion--label + input[type="radio"] {
+
+  label::before {
+    content: "+";
+    margin-right: 1rem;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
+  input[type="radio"] {
     display: none;
   }
 
-  &__accordion--span {
-    transform: rotate(90deg);
-    font-size: 2rem;
-    color: $reviews-desc-bg;
-  }
-  &__accordion--thumb {
-  }
-  &__accordion--content {
+  &__accordion .content {
+    color: #555;
+    padding: 0 0.6rem;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s;
+    transition: max-height 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
-  &__accordion--label + input[type="radio"]:checked + .faq__accordion--content {
-    max-height: 40rem;
+
+  input[type="radio"]:checked + label + .content {
+    max-height: 15rem;
+    padding: 0.5rem 1rem;
+
+    @media screen and (min-width: 768px) {
+      padding: 0.7rem 1.5rem;
+    }
+    @media screen and (min-width: 1200px) {
+      padding: 1rem 2rem;
+    }
+  }
+
+  input[type="radio"]:checked + label::before {
+    content: "-";
   }
 }

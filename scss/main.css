@@ -2170,7 +2170,7 @@ a {
   text-align: center;
   margin: 0;
   padding: 2rem 0;
-  background-color: #81939F;
+  background-color: #E9E9E9;
 }
 @media screen and (min-width: 768px) {
   .questions {
@@ -2179,7 +2179,7 @@ a {
 }
 @media screen and (min-width: 1200px) {
   .questions {
-    padding: 6rem 0;
+    padding: 4rem 0;
   }
 }
 .questions__title {
@@ -2223,18 +2223,15 @@ a {
     margin-bottom: 4rem;
   }
 }
-.questions__flex {
-  margin-bottom: 1rem;
-}
 .questions__input {
   width: 15rem;
   height: 2rem;
   border-radius: 0.5rem;
 }
 .questions__button {
-  margin-top: 1rem;
+  margin: 1rem 0 0 0;
   width: 15rem;
-  height: 2rem;
+  height: 2.3rem;
   font-size: 1rem;
   font-weight: 500;
   text-transform: uppercase;
@@ -2242,20 +2239,27 @@ a {
   border: 1px solid #edc114;
   border-radius: 0.5rem;
 }
+@media screen and (min-width: 992px) {
+  .questions__button {
+    margin: 0 0 0 1rem;
+  }
+}
 .questions__description--end {
   font-size: 0.5rem;
   font-weight: 300;
-  color: #d7d7d7;
-  margin: 0 auto;
+  color: #1f2732;
+  margin: 1rem auto 0;
 }
 @media screen and (min-width: 768px) {
   .questions__description--end {
+    margin-top: 1.5rem;
     font-size: 1rem;
     font-weight: 400;
   }
 }
 @media screen and (min-width: 1200px) {
   .questions__description--end {
+    margin-top: 2rem;
     font-size: 1.5rem;
     font-weight: 500;
   }
@@ -2263,7 +2267,7 @@ a {
 
 .faq {
   text-align: center;
-  background-color: #E9E9E9;
+  background-color: #81939F;
   padding: 2rem 0;
 }
 @media screen and (min-width: 768px) {
@@ -2298,58 +2302,178 @@ a {
   }
 }
 .faq__accordion {
-  list-style: none;
-  margin: 4rem auto;
-}
-.faq__accordion--item {
-  text-align: start;
-  background: #fff;
-  border-top: 1px solid grey;
-  padding: 0.5rem;
+  padding: 0;
+  margin: 1rem auto;
 }
 @media screen and (min-width: 768px) {
-  .faq__accordion--item {
-    padding: 1rem;
+  .faq__accordion {
+    margin: 2rem auto;
   }
 }
 @media screen and (min-width: 1200px) {
-  .faq__accordion--item {
-    padding: 1.5rem;
+  .faq__accordion {
+    margin: 3rem auto;
   }
 }
-.faq__accordion--label {
+.faq__accordion li {
+  text-align: justify;
+  list-style: none;
+  width: 95%;
+  background-color: #fff;
+}
+.faq__accordion li label {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  padding: 0.6rem;
   font-size: 0.8rem;
-  font-weight: 400;
+  font-weight: 600;
+  border-top: 1px solid #81939f;
+  background-color: #E9E9E9;
   cursor: pointer;
 }
 @media screen and (min-width: 768px) {
-  .faq__accordion--label {
-    font-size: 1.3rem;
-    font-weight: 500;
+  .faq__accordion li label {
+    font-size: 1rem;
+    font-weight: 700;
   }
 }
 @media screen and (min-width: 1200px) {
-  .faq__accordion--label {
-    font-size: 1.7rem;
-    font-weight: 600;
+  .faq__accordion li label {
+    font-size: 1.5rem;
   }
 }
-.faq__accordion--label + input[type=radio] {
+.faq label::before {
+  content: "+";
+  margin-right: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.faq input[type=radio] {
   display: none;
 }
-.faq__accordion--span {
-  transform: rotate(90deg);
-  font-size: 2rem;
-  color: #2e3947;
-}
-.faq__accordion--content {
+.faq__accordion .content {
+  color: #555;
+  padding: 0 0.6rem;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s;
+  transition: max-height 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.faq__accordion--label + input[type=radio]:checked + .faq__accordion--content {
-  max-height: 40rem;
+.faq input[type=radio]:checked + label + .content {
+  max-height: 15rem;
+  padding: 0.5rem 1rem;
+}
+@media screen and (min-width: 768px) {
+  .faq input[type=radio]:checked + label + .content {
+    padding: 0.7rem 1.5rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .faq input[type=radio]:checked + label + .content {
+    padding: 1rem 2rem;
+  }
+}
+.faq input[type=radio]:checked + label::before {
+  content: "-";
+}
+
+.prices {
+  background-color: #81939F;
+  text-align: center;
+  padding: 2rem 0;
+}
+@media screen and (min-width: 768px) {
+  .prices {
+    padding: 3rem 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .prices {
+    padding: 4rem 0;
+  }
+}
+.prices__title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #1f2732;
+  margin: 0 auto 1.5rem;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+  .prices__title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .prices__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+  }
+}
+.prices__description {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.62;
+  max-width: 60%;
+  margin: 0 auto 1rem;
+  color: #d7d7d7;
+}
+@media screen and (min-width: 768px) {
+  .prices__description {
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .prices__description {
+    margin-bottom: 3rem;
+  }
+}
+.prices__table,
+.prices tr,
+.prices td {
+  padding: 0.5rem;
+  margin: 0 auto;
+  border: 1px solid #E9E9E9;
+  border-collapse: collapse;
+  font-size: 1rem;
+  font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .prices__table,
+  .prices tr,
+  .prices td {
+    padding: 0.7rem;
+    margin-top: 1.5rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .prices__table,
+  .prices tr,
+  .prices td {
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+}
+.prices__button {
+  margin: 1rem 0 0 0;
+  width: 8rem;
+  height: 2.3rem;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: #edc114;
+  border: 1px solid #edc114;
+  border-radius: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .prices__button {
+    margin-top: 2rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .prices__button {
+    margin-top: 3rem;
+  }
 }/*# sourceMappingURL=main.css.map */
