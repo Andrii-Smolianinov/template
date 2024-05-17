@@ -2186,6 +2186,7 @@ a {
 .services__item {
   cursor: pointer;
   position: relative;
+  overflow: hidden;
 }
 .services__item--title {
   position: absolute;
@@ -2208,13 +2209,20 @@ a {
     font-weight: 600;
   }
 }
+.services__link:hover .services__item--detail, .services__link:focus .services__item--detail {
+  transform: translateY(-100%);
+}
 .services__item--detail {
   position: absolute;
-  bottom: 0.5rem;
-  right: 0.5rem;
+  font-size: 1.3rem;
+  top: 9.6rem;
+  right: 0;
   color: #fff;
+  transform: translateY(0);
+  transition: transform 250ms;
 }
 .services__thumb {
+  position: relative;
   width: 20rem;
   height: 15rem;
   background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/example.jpg");
