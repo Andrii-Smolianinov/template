@@ -1,49 +1,76 @@
 .about {
-  background-color: $second-bg;
+  background-image: linear-gradient(
+    to right,
+    $about-color 25%,
+    $font-second-color 25%,
+    $font-second-color 75%
+  );
 
-  &__container {
-    position: relative;
+  &__flex-box {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
   }
 
-  &__banner {
-    position: absolute;
-    left: 0.6rem;
-    bottom: 0;
-    height: 20rem; //320px
-    width: 15rem; //240px
+  &__left {
+    margin-top: 2rem;
+    height: 20rem;
+    width: 15rem;
     background-image: url("../images/about_banner.png");
-    background-repeat: no-repeat;
-    background-position: center;
     background-size: cover;
 
     @media screen and (min-width: 481px) {
       height: 27rem;
       width: 20rem;
-      left: 2rem;
     }
     @media screen and (min-width: 768px) {
-      height: 34.25rem; //548
-      width: 24.25rem; //388
-      left: 4rem;
+      height: 34.25rem;
+      width: 24.25rem;
     }
-    @media screen and (min-width: 1200px) {
-      left: 8rem;
-    }
-  }
-
-  &__wrapper {
-    display: flex;
-  }
-
-  &__left {
-    width: 30%;
-    background-color: $about-color;
   }
 
   &__right {
-    padding: 5px;
-    width: 70%;
-    background-color: $font-second-color;
-    min-height: 591px;
+    width: 50%;
+    height: 100%;
+    margin-left: 1rem;
+    padding: 1rem 0;
+
+    @media screen and (min-width: 481px) {
+      margin-left: 1.5rem;
+      padding: 1.5rem 0;
+    }
+    @media screen and (min-width: 768px) {
+      margin-left: 2rem;
+      padding: 2rem 0;
+    }
+  }
+
+  &__right--title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: $call-font-color;
+    margin-bottom: 1.5rem;
+    padding-right: 1.5rem;
+    text-transform: uppercase;
+
+    @media screen and (min-width: 768px) {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      padding-right: 2rem;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 3rem;
+      padding-right: 3rem;
+    }
+  }
+
+  &__right--text {
+    font-size: 1rem;
+    padding: 0 0.5rem;
   }
 }

@@ -1938,53 +1938,79 @@ a {
 }
 
 .about {
-  background-color: #81939F;
+  background-image: linear-gradient(to right, #e3c37a 25%, #d7d7d7 25%, #d7d7d7 75%);
 }
-.about__container {
-  position: relative;
+.about__flex-box {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
 }
-.about__banner {
-  position: absolute;
-  left: 0.6rem;
-  bottom: 0;
+.about__left {
+  margin-top: 2rem;
   height: 20rem;
   width: 15rem;
   background-image: url("../images/about_banner.png");
-  background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
 }
 @media screen and (min-width: 481px) {
-  .about__banner {
+  .about__left {
     height: 27rem;
     width: 20rem;
-    left: 2rem;
   }
 }
 @media screen and (min-width: 768px) {
-  .about__banner {
+  .about__left {
     height: 34.25rem;
     width: 24.25rem;
-    left: 4rem;
+  }
+}
+.about__right {
+  width: 50%;
+  height: 100%;
+  margin-left: 1rem;
+  padding: 1rem 0;
+}
+@media screen and (min-width: 481px) {
+  .about__right {
+    margin-left: 1.5rem;
+    padding: 1.5rem 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .about__right {
+    margin-left: 2rem;
+    padding: 2rem 0;
+  }
+}
+.about__right--title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #1f2732;
+  margin-bottom: 1.5rem;
+  padding-right: 1.5rem;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+  .about__right--title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    padding-right: 2rem;
   }
 }
 @media screen and (min-width: 1200px) {
-  .about__banner {
-    left: 8rem;
+  .about__right--title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    padding-right: 3rem;
   }
 }
-.about__wrapper {
-  display: flex;
-}
-.about__left {
-  width: 30%;
-  background-color: #e3c37a;
-}
-.about__right {
-  padding: 5px;
-  width: 70%;
-  background-color: #d7d7d7;
-  min-height: 591px;
+.about__right--text {
+  font-size: 1rem;
+  padding: 0 0.5rem;
 }
 
 .advantures {
