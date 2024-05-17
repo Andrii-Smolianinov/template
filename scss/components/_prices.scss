@@ -33,7 +33,7 @@
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.62;
-    max-width: 60%;
+    max-width: 100%;
     margin: 0 auto 1rem;
     color: $dark-color;
 
@@ -48,7 +48,7 @@
   &__table {
     width: 100%;
   }
-  
+
   &__table,
   tr,
   td {
@@ -57,7 +57,7 @@
     border: 1px solid #d7d7d7;
     border-collapse: collapse;
     font-size: 1rem;
-    font-weight: 700;    
+    font-weight: 700;
 
     @media screen and (min-width: 768px) {
       padding: 0.7rem;
@@ -90,7 +90,7 @@
 
     &:hover,
     &:focus {
-      background-color: $btn-color-hvr;     
+      background-color: $btn-color-hvr;
     }
   }
 }
