@@ -1,6 +1,6 @@
 .services {
-  text-align: center;  
-  background-color: $first-bg;
+  text-align: center;
+  background-color: $second-bg;
   padding: 2rem 0;
 
   @media screen and (min-width: 768px) {
@@ -30,7 +30,8 @@
   }
 
   &__list {
-    justify-content: center;  
+    padding: 0;
+    justify-content: center;
     list-style: none;
     display: flex;
     flex-wrap: wrap;
@@ -42,6 +43,43 @@
     @media screen and (min-width: 1200px) {
       gap: 2rem;
     }
+  }
+
+  &__item {
+    cursor: pointer;
+    position: relative;
+  }
+
+  &__item:hover {
+    
+  }
+
+
+  &__item--title {
+    position: absolute;
+    top: 5rem;
+    left: 1rem;    
+    font-size: 1rem;
+    font-weight: 500;
+    color: $white-color;
+    width: 90%;
+
+    @media screen and (min-width: 768px) {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+  }
+
+  &__item--detail {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    color: $white-color;
+    // display: none;
   }
 
   &__thumb {
@@ -57,5 +95,13 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    border-radius: 0.5rem;
+
+    @media screen and (min-width: 768px) {
+      border-radius: 0.7rem;
+    }
+    @media screen and (min-width: 1200px) {
+      border-radius: 1rem;
+    }
   }
 }

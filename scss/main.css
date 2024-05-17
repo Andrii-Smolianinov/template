@@ -1938,8 +1938,10 @@ a {
 }
 
 .about {
+  background-color: #81939F;
+}
+.about__container {
   position: relative;
-  background-color: #E9E9E9;
 }
 .about__banner {
   position: absolute;
@@ -1956,14 +1958,14 @@ a {
   .about__banner {
     height: 27rem;
     width: 20rem;
-    left: 3rem;
+    left: 2rem;
   }
 }
 @media screen and (min-width: 768px) {
   .about__banner {
     height: 34.25rem;
     width: 24.25rem;
-    left: 6rem;
+    left: 4rem;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1989,7 +1991,7 @@ a {
   text-align: center;
   margin: 0;
   padding: 2rem 0;
-  background-color: #81939F;
+  background-color: #E9E9E9;
 }
 @media screen and (min-width: 768px) {
   .advantures {
@@ -2001,11 +2003,25 @@ a {
     padding: 4rem 0;
   }
 }
+.advantures__container {
+  position: relative;
+}
+.advantures__thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 30%;
+  background-image: url("../images/bg-advantures.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 .advantures__description {
   font-size: 1rem;
   font-weight: 300;
   line-height: 1.62;
-  color: #d7d7d7;
+  color: #1f2732;
 }
 .advantures__title {
   font-size: 1.5rem;
@@ -2034,20 +2050,28 @@ a {
   padding: 0;
   margin: 0;
   max-width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 @media screen and (max-width: 767px) {
   .advantures__list :not(:last-child) {
     margin-bottom: 1rem;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .advantures__list {
-    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
   }
 }
+@media screen and (min-width: 1200px) {
+  .advantures__list {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
 .advantures__items {
-  border: 1px solid #fff;
+  border: 1px solid #161d27;
   border-radius: 1rem;
   height: 14rem;
   text-align: start;
@@ -2055,13 +2079,13 @@ a {
 }
 @media screen and (min-width: 768px) {
   .advantures__items {
-    width: 22rem;
+    width: 20rem;
     margin: 0.5rem;
   }
 }
 @media screen and (min-width: 1200px) {
   .advantures__items {
-    width: 14rem;
+    width: calc((100% - 4rem) / 4);
   }
 }
 .advantures__icon {
@@ -2092,6 +2116,7 @@ a {
   background-color: #edc114;
   border: 1px solid #edc114;
   border-radius: 0.5rem;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .advantures__button {
@@ -2106,7 +2131,7 @@ a {
 
 .services {
   text-align: center;
-  background-color: #E9E9E9;
+  background-color: #81939F;
   padding: 2rem 0;
 }
 @media screen and (min-width: 768px) {
@@ -2141,6 +2166,7 @@ a {
   }
 }
 .services__list {
+  padding: 0;
   justify-content: center;
   list-style: none;
   display: flex;
@@ -2157,6 +2183,37 @@ a {
     gap: 2rem;
   }
 }
+.services__item {
+  cursor: pointer;
+  position: relative;
+}
+.services__item--title {
+  position: absolute;
+  top: 5rem;
+  left: 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  width: 90%;
+}
+@media screen and (min-width: 768px) {
+  .services__item--title {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .services__item--title {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+}
+.services__item--detail {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  color: #fff;
+}
 .services__thumb {
   width: 20rem;
   height: 15rem;
@@ -2164,13 +2221,24 @@ a {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  border-radius: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .services__thumb {
+    border-radius: 0.7rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .services__thumb {
+    border-radius: 1rem;
+  }
 }
 
 .questions {
   text-align: center;
   margin: 0;
   padding: 2rem 0;
-  background-color: #E9E9E9;
+  background-color: #81939F;
 }
 @media screen and (min-width: 768px) {
   .questions {
@@ -2227,21 +2295,46 @@ a {
   width: 15rem;
   height: 2rem;
   border-radius: 0.5rem;
+  padding: 0.1rem 0.2rem;
+}
+@media screen and (min-width: 768px) {
+  .questions__input {
+    padding: 0.2rem 0.3rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .questions__input {
+    padding: 0.3rem 0.4rem;
+  }
 }
 .questions__button {
   margin: 1rem 0 0 0;
   width: 15rem;
-  height: 2.3rem;
-  font-size: 1rem;
-  font-weight: 500;
+  height: 2.2rem;
+  font-size: 0.7rem;
+  font-weight: 400;
   text-transform: uppercase;
   background-color: #edc114;
   border: 1px solid #edc114;
   border-radius: 0.5rem;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .questions__button {
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
 }
 @media screen and (min-width: 992px) {
   .questions__button {
     margin: 0 0 0 1rem;
+    height: 2.4rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .questions__button {
+    font-size: 1rem;
+    height: 2.6rem;
   }
 }
 .questions__description--end {
@@ -2267,7 +2360,7 @@ a {
 
 .faq {
   text-align: center;
-  background-color: #81939F;
+  background-color: #E9E9E9;
   padding: 2rem 0;
 }
 @media screen and (min-width: 768px) {
@@ -2320,6 +2413,18 @@ a {
   list-style: none;
   width: 95%;
   background-color: #fff;
+  margin: 0.1rem;
+  border-radius: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .faq__accordion li {
+    margin: 0.2rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .faq__accordion li {
+    margin: 0.3rem;
+  }
 }
 .faq__accordion li label {
   display: flex;
@@ -2327,19 +2432,21 @@ a {
   padding: 0.6rem;
   font-size: 0.8rem;
   font-weight: 600;
-  border-top: 1px solid #81939f;
-  background-color: #E9E9E9;
+  border-radius: 0.5rem;
+  background-color: #fff;
   cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .faq__accordion li label {
     font-size: 1rem;
     font-weight: 700;
+    border-radius: 0.7rem;
   }
 }
 @media screen and (min-width: 1200px) {
   .faq__accordion li label {
     font-size: 1.5rem;
+    border-radius: 1rem;
   }
 }
 .faq label::before {
@@ -2377,7 +2484,7 @@ a {
 }
 
 .prices {
-  background-color: #81939F;
+  background-color: #fff;
   text-align: center;
   padding: 2rem 0;
 }
@@ -2414,11 +2521,11 @@ a {
 }
 .prices__description {
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.62;
   max-width: 60%;
   margin: 0 auto 1rem;
-  color: #d7d7d7;
+  color: #161d27;
 }
 @media screen and (min-width: 768px) {
   .prices__description {
@@ -2430,12 +2537,15 @@ a {
     margin-bottom: 3rem;
   }
 }
+.prices__table {
+  width: 100%;
+}
 .prices__table,
 .prices tr,
 .prices td {
   padding: 0.5rem;
   margin: 0 auto;
-  border: 1px solid #E9E9E9;
+  border: 1px solid #d7d7d7;
   border-collapse: collapse;
   font-size: 1rem;
   font-weight: 700;
@@ -2466,6 +2576,7 @@ a {
   background-color: #edc114;
   border: 1px solid #edc114;
   border-radius: 0.5rem;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .prices__button {

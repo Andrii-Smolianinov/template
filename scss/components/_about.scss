@@ -1,6 +1,9 @@
 .about {
-  position: relative;
-  background-color: $first-bg;
+  background-color: $second-bg;
+
+  &__container {
+    position: relative;
+  }
 
   &__banner {
     position: absolute;
@@ -16,12 +19,12 @@
     @media screen and (min-width: 481px) {
       height: 27rem;
       width: 20rem;
-      left: 3rem;
+      left: 2rem;
     }
     @media screen and (min-width: 768px) {
       height: 34.25rem; //548
       width: 24.25rem; //388
-      left: 6rem;
+      left: 4rem;
     }
     @media screen and (min-width: 1200px) {
       left: 8rem;

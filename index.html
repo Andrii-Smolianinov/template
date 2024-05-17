@@ -8,7 +8,7 @@
   </head>
   <body>
     <section class="about">
-      <div class="container">
+      <div class="container about__container">
         <div class="about__banner"></div>
         <div class="about__wrapper">
           <div class="about__left"></div>
@@ -38,8 +38,9 @@
         </div>
       </div>
     </section>
-    <section class="advantures">
+    <section class="advantures advantures__container">
       <div class="container">
+        <div class="advantures__thumb"></div>
         <p class="advantures__description">наши преимущества</p>
         <h2 class="advantures__title">Почему выбирают нас</h2>
         <ul class="advantures__list">
@@ -83,49 +84,59 @@
         <h2 class="services__title">Нотариальные услуги</h2>
         <ul class="services__list">
           <li class="services__item">
-            <a class="services__link" target="_blank"
-              ><div class="services__thumb"></div
-            ></a>
+            <a class="services__link" target="_blank">
+              <div class="services__thumb"></div>
+              <div class="services__item--title">Lorem, ipsum dolor.</div>
+              <div class="services__item--detail">детальнее...</div>              
+            </a>
           </li>
           <li class="services__item">
             <a class="services__link" target="_blank"
-              ><div class="services__thumb"></div
-            ></a>
+              ><div class="services__thumb"></div>
+              <div class="services__item--title">Lorem, ipsum dolor.</div>
+            </a>
           </li>
           <li class="services__item">
             <a class="services__link" target="_blank"
-              ><div class="services__thumb"></div
-            ></a>
+              ><div class="services__thumb"></div>
+              <div class="services__item--title">Lorem, ipsum dolor.</div>
+            </a>
           </li>
           <li class="services__item">
             <a class="services__link" target="_blank"
-              ><div class="services__thumb"></div
-            ></a>
+              ><div class="services__thumb"></div>
+              <div class="services__item--title">Lorem, ipsum dolor.</div>
+            </a>
           </li>
           <li class="services__item">
             <a class="services__link" target="_blank"
-              ><div class="services__thumb"></div
-            ></a>
+              ><div class="services__thumb"></div>
+              <div class="services__item--title">Lorem, ipsum dolor.</div>
+            </a>
           </li>
           <li class="services__item">
             <a class="services__link" target="_blank"
-              ><div class="services__thumb"></div
-            ></a>
+              ><div class="services__thumb"></div>
+              <div class="services__item--title">Lorem, ipsum dolor.</div>
+            </a>
           </li>
           <li class="services__item">
             <a class="services__link" target="_blank"
-              ><div class="services__thumb"></div
-            ></a>
+              ><div class="services__thumb"></div>
+              <div class="services__item--title">Lorem, ipsum dolor.</div>
+            </a>
           </li>
           <li class="services__item">
             <a class="services__link" target="_blank"
-              ><div class="services__thumb"></div
-            ></a>
+              ><div class="services__thumb"></div>
+              <div class="services__item--title">Lorem, ipsum dolor.</div>
+            </a>
           </li>
           <li class="services__item">
             <a class="services__link" target="_blank"
-              ><div class="services__thumb"></div
-            ></a>
+              ><div class="services__thumb"></div>
+              <div class="services__item--title">Lorem, ipsum dolor.</div>
+            </a>
           </li>
         </ul>
       </div>
@@ -212,7 +223,7 @@
           />
           <input
             class="questions__input"
-            type="number"
+            type="text"
             placeholder="Ваш номер телефона"
           />
           <button class="questions__button">Получить консультацию</button>
@@ -225,7 +236,11 @@
     <section class="prices">
       <div class="container">
         <h2 class="prices__title">Тарифы</h2>
-        <div class="prices__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores nam sunt nemo veritatis aspernatur perspiciatis suscipit aperiam itaque quo rem.</div>
+        <div class="prices__description">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores nam
+          sunt nemo veritatis aspernatur perspiciatis suscipit aperiam itaque
+          quo rem.
+        </div>
         <table class="prices__table">
           <tr>
             <td>Нотариальное действие</td>
