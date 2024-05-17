@@ -76,8 +76,8 @@
     font-size: 1rem;
     font-weight: 500;
     text-transform: uppercase;
-    background-color: $accent-color;
-    border: 1px solid $accent-color;
+    background-color: $btn-color;
+    border: 1px solid $btn-color;
     border-radius: 0.5rem;
     cursor: pointer;
 
@@ -86,6 +86,11 @@
     }
     @media screen and (min-width: 1200px) {
       margin-top: 3rem;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $btn-color-hvr;     
     }
   }
 }

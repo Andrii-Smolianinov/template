@@ -2,7 +2,7 @@
   text-align: center;
   margin: 0;
   padding: 2rem 0;
-  background-color: $first-bg;
+  background-color: $first-bg;  
 
   @media screen and (min-width: 768px) {
     padding: 3rem 0;
@@ -12,7 +12,7 @@
   }
 
   &__container {
-    position: relative;
+    position: relative;    
   }
 
   &__thumb {
@@ -55,14 +55,14 @@
   }
 
   &__list {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    list-style: none;
+    align-items: center;
     padding: 0;
     margin: 0;
     max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    // gap: 1rem;
+    list-style: none;
 
     @media screen and (max-width: 767px) {
       :not(:last-child) {
@@ -75,18 +75,19 @@
       flex-wrap: wrap;
     }
     @media screen and (min-width: 1200px) {
-      flex-direction: row;      
+      flex-direction: row;
       flex-wrap: nowrap;
     }
-
   }
 
   &__items {
     border: 1px solid $dark-color;
     border-radius: 1rem;
     height: 14rem;
-    text-align: start;
+    text-align: start;    
     padding: 1rem;
+    width: 80%;
+    max-width: 20rem;
 
     @media screen and (min-width: 768px) {
       width: 20rem;
@@ -107,7 +108,7 @@
   &__items-title {
     margin: 1rem 0;
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 1.18;
     text-transform: uppercase;
     color: $call-font-color;
@@ -125,10 +126,10 @@
     width: 11rem;
     height: 2rem;
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 500;
     text-transform: uppercase;
-    background-color: $accent-color;
-    border: 1px solid $accent-color;
+    background-color: $btn-color;
+    border: 1px solid $btn-color;
     border-radius: 0.5rem;
     cursor: pointer;
 
@@ -137,6 +138,11 @@
     }
     @media screen and (min-width: 1200px) {
       margin-top: 3rem;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $btn-color-hvr;
     }
   }
 }

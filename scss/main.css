@@ -2045,13 +2045,14 @@ a {
   }
 }
 .advantures__list {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  list-style: none;
+  align-items: center;
   padding: 0;
   margin: 0;
   max-width: 100%;
-  display: flex;
-  flex-direction: column;
+  list-style: none;
 }
 @media screen and (max-width: 767px) {
   .advantures__list :not(:last-child) {
@@ -2076,6 +2077,8 @@ a {
   height: 14rem;
   text-align: start;
   padding: 1rem;
+  width: 80%;
+  max-width: 20rem;
 }
 @media screen and (min-width: 768px) {
   .advantures__items {
@@ -2095,7 +2098,7 @@ a {
 .advantures__items-title {
   margin: 1rem 0;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1.18;
   text-transform: uppercase;
   color: #1f2732;
@@ -2111,10 +2114,10 @@ a {
   width: 11rem;
   height: 2rem;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
   text-transform: uppercase;
-  background-color: #edc114;
-  border: 1px solid #edc114;
+  background-color: #f7d13d;
+  border: 1px solid #f7d13d;
   border-radius: 0.5rem;
   cursor: pointer;
 }
@@ -2127,6 +2130,9 @@ a {
   .advantures__button {
     margin-top: 3rem;
   }
+}
+.advantures__button:hover, .advantures__button:focus {
+  background-color: rgba(247, 210, 61, 0.6352941176);
 }
 
 .services {
@@ -2322,8 +2328,8 @@ a {
   font-size: 0.7rem;
   font-weight: 400;
   text-transform: uppercase;
-  background-color: #edc114;
-  border: 1px solid #edc114;
+  background-color: #f7d13d;
+  border: 1px solid #f7d13d;
   border-radius: 0.5rem;
   cursor: pointer;
 }
@@ -2344,6 +2350,9 @@ a {
     font-size: 1rem;
     height: 2.6rem;
   }
+}
+.questions__button:hover, .questions__button:focus {
+  background-color: rgba(247, 210, 61, 0.6352941176);
 }
 .questions__description--end {
   font-size: 0.5rem;
@@ -2581,8 +2590,8 @@ a {
   font-size: 1rem;
   font-weight: 500;
   text-transform: uppercase;
-  background-color: #edc114;
-  border: 1px solid #edc114;
+  background-color: #f7d13d;
+  border: 1px solid #f7d13d;
   border-radius: 0.5rem;
   cursor: pointer;
 }
@@ -2595,4 +2604,7 @@ a {
   .prices__button {
     margin-top: 3rem;
   }
+}
+.prices__button:hover, .prices__button:focus {
+  background-color: rgba(247, 210, 61, 0.6352941176);
 }/*# sourceMappingURL=main.css.map */
