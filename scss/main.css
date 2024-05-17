@@ -2006,9 +2006,6 @@ a {
     padding: 4rem 0;
   }
 }
-.advantures__container {
-  position: relative;
-}
 .advantures__description {
   font-size: 1rem;
   font-weight: 300;
@@ -2037,55 +2034,57 @@ a {
   }
 }
 .advantures__list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   padding: 0;
   margin: 0;
+  background-color: #fff;
+  background-image: url("../images/bg-advantures.png");
+  background-repeat: no-repeat;
+  background-position: bottom 0px right;
   list-style: none;
+  box-sizing: border-box;
 }
-@media screen and (max-width: 767px) {
-  .advantures__list :not(:last-child) {
-    margin-bottom: 1rem;
+@media screen and (min-width: 768px) {
+  .advantures__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1199px) {
+@media screen and (min-width: 768px) {
   .advantures__list {
-    flex-direction: row;
+    display: flex;
     flex-wrap: wrap;
   }
 }
-@media screen and (min-width: 1200px) {
-  .advantures__list {
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
-}
-.advantures__items {
-  text-align: start;
-  min-height: 14rem;
-  max-width: 20rem;
+.advantures__item {
   padding: 1rem;
+  margin-bottom: 30px;
+  text-align: start;
   border: 1px solid #D9D9D9;
   border-radius: 1rem;
   background-color: #fff;
+  box-sizing: border-box;
 }
 @media screen and (min-width: 768px) {
-  .advantures__items {
-    width: calc((100% - 0.1rem) / 2);
+  .advantures__item {
+    margin: 15px;
+    width: calc((100% - 60px) / 2);
   }
 }
 @media screen and (min-width: 1200px) {
-  .advantures__items {
-    width: calc((100% - 4rem) / 4);
+  .advantures__item {
+    width: calc((100% - 120px) / 4);
   }
 }
-.advantures__icon {
-  height: 3rem;
-  width: 3rem;
+.advantures__background {
+  height: 4rem;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #fff;
 }
-.advantures__items-title {
+.advantures__item-title {
   margin: 1rem 0;
   font-size: 1rem;
   font-weight: 600;
@@ -2093,7 +2092,7 @@ a {
   text-transform: uppercase;
   color: #1f2732;
 }
-.advantures__items-description {
+.advantures__item-description {
   font-size: 1.14rem;
   font-weight: 300;
   line-height: 1.12;

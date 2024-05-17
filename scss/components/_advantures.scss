@@ -15,10 +15,6 @@
     padding: 4rem 0;
   }
 
-  &__container {
-    position: relative;
-  }
-
   &__description {
     font-size: 1rem;
     font-weight: 300;
@@ -46,54 +42,56 @@
   }
 
   &__list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     padding: 0;
-    margin: 0;    
+    margin: 0;
+    background-color: $white-color;
+    background-image: url("../images/bg-advantures.png");
+    background-repeat: no-repeat;
+    background-position: bottom 0px right;
     list-style: none;
+    box-sizing: border-box;
 
-    @media screen and (max-width: 767px) {
-      :not(:last-child) {
-        margin-bottom: 1rem;
-      }
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -15px;
     }
 
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
-      flex-direction: row;
-      flex-wrap: wrap;      
-    }
-    @media screen and (min-width: 1200px) {
-      flex-direction: row;
-      flex-wrap: nowrap;
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
     }
   }
 
-  &__items {
-    text-align: start;
-    min-height: 14rem;    
-    max-width: 20rem;
+  &__item {
     padding: 1rem;
+    margin-bottom: 30px;
+    text-align: start;
     border: 1px solid $border-advantures;
     border-radius: 1rem;
     background-color: $white-color;
+    box-sizing: border-box;
 
-    @media screen and (min-width: 768px) {     
-      width: calc((100% -  0.1rem) / 2);
+    @media screen and (min-width: 768px) {
+      margin: 15px;
+      width: calc((100% - 4 * 15px) / 2);
     }
+
     @media screen and (min-width: 1200px) {
-      // width: 14rem;
-      width: calc((100% - 8 * 0.5rem) / 4);
+      width: calc((100% - 8 * 15px) / 4);
     }
   }
 
-  &__icon {
-    height: 3rem;
-    width: 3rem;
+  &__background {
+    height: 4rem;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: $white-color;
   }
 
-  &__items-title {
+  &__item-title {
     margin: 1rem 0;
     font-size: 1rem;
     font-weight: 600;
@@ -102,7 +100,7 @@
     color: $call-font-color;
   }
 
-  &__items-description {
+  &__item-description {
     font-size: 1.14rem;
     font-weight: 300;
     line-height: 1.12;
@@ -134,3 +132,5 @@
     }
   }
 }
+
+
