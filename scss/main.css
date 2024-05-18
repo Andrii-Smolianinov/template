@@ -2018,9 +2018,9 @@ a {
   margin: 0;
   padding: 2rem 0;
   background-color: #fff;
-  background-image: url("../images/bg-advantures.png");
   background-repeat: no-repeat;
   background-position: bottom 0px right;
+  background-image: url("../images/bg-advantures.png");
 }
 @media screen and (min-width: 768px) {
   .advantures {
@@ -2062,10 +2062,6 @@ a {
 .advantures__list {
   padding: 0;
   margin: 0;
-  background-color: #fff;
-  background-image: url("../images/bg-advantures.png");
-  background-repeat: no-repeat;
-  background-position: bottom 0px right;
   list-style: none;
   box-sizing: border-box;
 }
@@ -2090,6 +2086,7 @@ a {
   border-radius: 1rem;
   background-color: #fff;
   box-sizing: border-box;
+  overflow: hidden;
 }
 @media screen and (min-width: 768px) {
   .advantures__item {

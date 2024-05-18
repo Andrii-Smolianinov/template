@@ -3,10 +3,9 @@
   margin: 0;
   padding: 2rem 0;
   background-color: $white-color;
-  background-image: url("../images/bg-advantures.png");
-
   background-repeat: no-repeat;
   background-position: bottom 0px right;
+  background-image: url("../images/bg-advantures.png");  
 
   @media screen and (min-width: 768px) {
     padding: 3rem 0;
@@ -43,13 +42,9 @@
 
   &__list {
     padding: 0;
-    margin: 0;
-    background-color: $white-color;
-    background-image: url("../images/bg-advantures.png");
-    background-repeat: no-repeat;
-    background-position: bottom 0px right;
+    margin: 0; 
     list-style: none;
-    box-sizing: border-box;
+    box-sizing: border-box;    
 
     @media screen and (min-width: 768px) {
       display: flex;
@@ -71,6 +66,7 @@
     border-radius: 1rem;
     background-color: $white-color;
     box-sizing: border-box;
+    overflow: hidden;
 
     @media screen and (min-width: 768px) {
       margin: 15px;
