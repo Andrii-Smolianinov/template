@@ -13,12 +13,16 @@
 
   &__flex-box {
     display: flex;
-    flex-direction: column;
+    flex-direction: column;    
   }
 
   &__flex-box--wrap {
     display: flex;
     justify-content: space-between;
+
+    button {
+      margin: 0;
+    }
   }
 
   &__description {
@@ -30,21 +34,22 @@
   }
 
   &__title {
+    text-align: start;
     font-size: 1.5rem;
     font-weight: 400;
     color: $call-font-color;
-    margin: 1.5rem auto;
+    margin: 0 0 1.5rem;
     text-transform: uppercase;
 
     @media screen and (min-width: 768px) {
       font-size: 2rem;
       font-weight: 600;
-      margin: 2rem auto;
+      margin: 0 0 2rem;
     }
     @media screen and (min-width: 1200px) {
       font-size: 2.5rem;
       font-weight: 700;
-      margin: 3rem auto;
+      margin: 0 0 3rem;
     }
   }
 
@@ -55,15 +60,10 @@
     list-style: none;
     box-sizing: border-box;
 
-    :nth-child(1) {
-      background-image: url("../../images/useful-1.png");
-      background-repeat: no-repeat;
-    }
-
     @media screen and (min-width: 768px) {
       display: flex;
       flex-wrap: wrap;
-      align-items: stretch;
+      align-items: flex-start;
       margin: -15px;
     }
 
@@ -74,6 +74,8 @@
   }
 
   &__item {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 30px;
     text-align: start;
     background-color: $white-color;
@@ -87,22 +89,54 @@
     @media screen and (min-width: 1200px) {
       width: calc((100% - 8 * 15px) / 4);
     }
+
+    button {
+      margin: 0 auto 0.5rem auto;
+
+      @media screen and (min-width: 768px) {
+        margin: 0 auto 1rem auto;
+      }
+      @media screen and (min-width: 1200px) {
+        margin: 0 auto 2rem auto;
+      }
+    }
   }
 
-  &__background--div {
-    height: 13.5rem;
-    width: 100%;
-    display: inline-flex;
-    align-items: center;
-    justify-content: flex-start;
-    background-color: #fff;
+  &__item--first {
+    margin-bottom: 30px;
+    text-align: start;
+    background-color: $white-color;
+
+    @media screen and (min-width: 768px) {
+      margin: 15px;
+      width: calc((100% - 4 * 15px) / 2);
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: calc((100% - 8 * 15px) / 4);
+    }
+
+    button {
+      position: relative;
+      bottom: 16rem;
+      margin: 0 0 0 1rem;
+
+      @media screen and (min-width: 768px) {
+        bottom: 12rem;
+      }
+      @media screen and (min-width: 1200px) {
+        bottom: 9rem;
+        margin: 0 0 0 0.5rem;
+      }
+    }
   }
 
   &__background {
-    height: 15rem;
     width: 100%;
     display: inline-flex;
+    object-fit: fill;
   }
+
   &__item-wrap {
     padding: 0.5rem;
   }
@@ -116,15 +150,25 @@
   }
 
   &__item-title--first {
-    color: #fff;
-    margin: 0.5rem 0.5rem;
+    position: relative;
+    bottom: 18rem;
+    color: $white-font-color;
+    margin: 0 1rem;
     font-size: 1rem;
     font-weight: 600;
     text-transform: uppercase;
+
+    @media screen and (min-width: 768px) {
+      bottom: 14rem;
+    }
+    @media screen and (min-width: 1200px) {
+      bottom: 10rem;
+      margin: 0 0.5rem;
+    }
   }
 
   &__item-description {
-    margin: 0 0.5rem;
+    margin: 0.5rem 0.5rem 0;
     font-size: 1.14rem;
     font-weight: 300;
     line-height: 1.12;
@@ -132,23 +176,21 @@
   }
 
   &__item-description--first {
-    margin: 0 0.5rem;
+    position: relative;
+    bottom: 18rem;
+    color: $white-color;
+    margin: 0 1rem;
     font-size: 1.14rem;
     font-weight: 300;
     line-height: 1.12;
-    color: #fff;
-  }
+    color: $white-font-color;
 
-  &__btn {
-    margin: 0 0.5rem;
-    padding: 0.75rem 1.5rem;
-    background-color: #fff;
-    border: 1px solid #e3c37a;
-  }
-  &__btn--first {
-    margin: 0 0.5rem;
-    padding: 0.75rem 1.5rem;
-    background-color: rgba(28, 28, 28, 0);
-    border: 1px solid #e3c37a;
+    @media screen and (min-width: 768px) {
+      bottom: 14rem;
+    }
+    @media screen and (min-width: 1200px) {
+      bottom: 10rem;
+      margin: 0 0.5rem;
+    }
   }
 }
