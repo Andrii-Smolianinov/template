@@ -1942,16 +1942,17 @@ a {
 }
 .about__flex-box {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
 }
 .about__left {
-  margin-top: 2rem;
+  position: relative;
   height: 20rem;
   width: 15rem;
-  background-image: url("../images/about_banner.png");
-  background-size: cover;
+  background-image: url("../images/bg-about.png");
+  background-repeat: no-repeat;
 }
 @media screen and (min-width: 481px) {
   .about__left {
@@ -1964,6 +1965,11 @@ a {
     height: 34.25rem;
     width: 24.25rem;
   }
+}
+.about__left--img {
+  position: absolute;
+  bottom: 0;
+  height: 90%;
 }
 .about__right {
   width: 50%;
@@ -2109,14 +2115,14 @@ a {
 }
 .advantures__item-title {
   margin: 1rem 0;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 600;
   line-height: 1.18;
   text-transform: uppercase;
   color: #1f2732;
 }
 .advantures__item-description {
-  font-size: 1.14rem;
+  font-size: 0.8rem;
   font-weight: 300;
   line-height: 1.12;
   color: #1f2732;
@@ -2159,23 +2165,13 @@ a {
   }
 }
 .services__list {
+  display: flex;
+  flex-wrap: wrap;
   padding: 0;
   justify-content: center;
   list-style: none;
   box-sizing: border-box;
-}
-@media screen and (max-width: 767px) {
-  .services__list :not(:last-child) {
-    margin-bottom: 0.5rem;
-  }
-}
-@media screen and (min-width: 768px) {
-  .services__list {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 0;
-    margin: -15px;
-  }
+  margin: -15px;
 }
 @media screen and (min-width: 768px) {
   .services__list {
@@ -2186,11 +2182,14 @@ a {
 .services__item {
   position: relative;
   box-sizing: border-box;
+  margin: 15px;
+  width: calc((100% - 60px) / 2);
+  border-radius: 0.5rem;
+  overflow: hidden;
   cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .services__item {
-    margin: 15px;
     width: calc((100% - 90px) / 3);
   }
 }
@@ -2207,6 +2206,16 @@ a {
   transform: scale(1.05);
   box-shadow: 10px 10px 8px 2px rgba(92, 116, 128, 0.3);
 }
+.services__item:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 10;
+}
 .services__link {
   display: flex;
   flex-direction: column;
@@ -2220,6 +2229,7 @@ a {
   font-size: 1.5rem;
   font-weight: 600;
   color: #fff;
+  z-index: 20;
 }
 @media screen and (min-width: 768px) {
   .services__item--title {
@@ -2240,6 +2250,7 @@ a {
   top: -4rem;
   right: 1rem;
   color: #fff;
+  z-index: 20;
   transform: opacity(0.5);
   transition: transform 250ms;
 }
@@ -2254,7 +2265,6 @@ a {
   }
 }
 .services__images {
-  border-radius: 0.5rem;
   transform: scale(1);
   transition: transform 250ms;
 }
@@ -2540,10 +2550,8 @@ a {
 }
 
 .useful {
-  text-align: center;
   margin: 0;
   padding: 2rem 0;
-  background-color: #fff;
 }
 @media screen and (min-width: 768px) {
   .useful {
@@ -2556,15 +2564,15 @@ a {
   }
 }
 .useful__flex-box {
-  display: flex;
-  flex-direction: column;
-}
-.useful__flex-box--wrap {
+  position: relative;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
 }
-.useful__flex-box--wrap button {
-  margin: 0;
+.useful__flex-box button {
+  position: absolute;
+  right: 0;
 }
 .useful__description {
   margin: 0;
@@ -2595,152 +2603,328 @@ a {
     margin: 0 0 3rem;
   }
 }
-.useful__list {
-  padding: 0;
-  margin: 0;
-  background-color: #fff;
-  list-style: none;
-  box-sizing: border-box;
+.useful__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, minmax(30rem, auto));
+  grid-gap: 1rem;
 }
 @media screen and (min-width: 768px) {
-  .useful__list {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    margin: -15px;
+  .useful__grid {
+    grid-gap: 1.5rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: minmax(10rem, auto) minmax(10rem, auto);
   }
 }
-@media screen and (min-width: 768px) {
-  .useful__list {
-    display: flex;
-    flex-wrap: wrap;
+@media screen and (min-width: 1200px) {
+  .useful__grid {
+    grid-gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: minmax(10rem, auto);
   }
 }
 .useful__item {
+  text-align: start;
   display: flex;
   flex-direction: column;
-  margin-bottom: 30px;
-  text-align: start;
-  background-color: #fff;
-  box-sizing: border-box;
+  justify-content: space-between;
+  padding: 0 0 1rem 0;
 }
 @media screen and (min-width: 768px) {
   .useful__item {
-    margin: 15px;
-    width: calc((100% - 60px) / 2);
+    padding: 0 0 1.5rem 0;
   }
 }
 @media screen and (min-width: 1200px) {
   .useful__item {
-    width: calc((100% - 120px) / 4);
-  }
-}
-.useful__item button {
-  margin: 0 auto 0.5rem auto;
-}
-@media screen and (min-width: 768px) {
-  .useful__item button {
-    margin: 0 auto 1rem auto;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .useful__item button {
-    margin: 0 auto 2rem auto;
+    padding: 0 0 2rem 0;
   }
 }
 .useful__item--first {
-  margin-bottom: 30px;
-  text-align: start;
-  background-color: #fff;
-}
-@media screen and (min-width: 768px) {
-  .useful__item--first {
-    margin: 15px;
-    width: calc((100% - 60px) / 2);
-  }
-}
-@media screen and (min-width: 1200px) {
-  .useful__item--first {
-    width: calc((100% - 120px) / 4);
-  }
-}
-.useful__item--first button {
   position: relative;
-  bottom: 16rem;
-  margin: 0 0 0 1rem;
-}
-@media screen and (min-width: 768px) {
-  .useful__item--first button {
-    bottom: 12rem;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .useful__item--first button {
-    bottom: 9rem;
-    margin: 0 0 0 0.5rem;
-  }
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 0 1rem 0;
 }
 .useful__background {
-  width: 100%;
-  display: inline-flex;
+  min-height: 60%;
   -o-object-fit: fill;
      object-fit: fill;
+  border-radius: 1rem;
 }
-.useful__item-wrap {
-  padding: 0.5rem;
+.useful__background--first {
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem;
+  z-index: 10;
 }
-.useful__item-title {
-  margin: 0.5rem 0.5rem;
-  font-size: 1rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: #1f2732;
+.useful__item--wrap {
+  padding: 1rem;
 }
-.useful__item-title--first {
-  position: relative;
-  bottom: 18rem;
-  color: #fff;
-  margin: 0 1rem;
-  font-size: 1rem;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-@media screen and (min-width: 768px) {
-  .useful__item-title--first {
-    bottom: 14rem;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .useful__item-title--first {
-    bottom: 10rem;
-    margin: 0 0.5rem;
-  }
+.useful__item--wrap--first {
+  padding: 1rem;
 }
 .useful__item-description {
-  margin: 0.5rem 0.5rem 0;
-  font-size: 1.14rem;
-  font-weight: 300;
-  line-height: 1.12;
-  color: #1f2732;
+  font-size: 0.8rem;
+  margin: 0;
 }
 .useful__item-description--first {
-  position: relative;
-  bottom: 18rem;
+  position: absolute;
+  bottom: 10rem;
+  font-size: 0.8rem;
+  margin: 0;
   color: #fff;
-  margin: 0 1rem;
-  font-size: 1.14rem;
-  font-weight: 300;
-  line-height: 1.12;
+  z-index: 20;
+}
+.useful__item-title {
+  font-size: 1.2rem;
+}
+.useful__item-title--first {
+  position: absolute;
+  bottom: 6rem;
+  margin: 0;
+  font-size: 1.2rem;
   color: #fff;
+  z-index: 20;
+}
+.useful button {
+  margin: 0 auto;
+}
+.useful__link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e3c37a;
+  border-radius: 0.5rem;
+  width: 6.9rem;
+  padding: 0.75rem 1.5rem;
+  color: black;
+  text-transform: uppercase;
+}
+.useful__link:hover,
+.useful__link :focus {
+  background-color: #e3c37a;
+}
+.useful__link--first {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 6.9rem;
+  padding: 0.75rem 1.5rem;
+  margin: 0 auto;
+  border: 1px solid #e3c37a;
+  border-radius: 0.5rem;
+  color: #e3c37a;
+  text-transform: uppercase;
+  z-index: 20;
+}
+.useful__link--first:hover,
+.useful__link--first :focus {
+  background-color: #e3c37a;
+  color: black;
+}
+.useful__link--second {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e3c37a;
+  border-radius: 0.5rem;
+  width: 11.2rem;
+  padding: 0.75rem 1.5rem;
+  color: black;
+  text-transform: uppercase;
+}
+.useful__link--second:hover,
+.useful__link--second :focus {
+  background-color: #e3c37a;
+}
+
+.calculate {
+  text-align: center;
+  padding: 2rem 0;
+  background-image: linear-gradient(to bottom, rgba(7, 7, 7, 0.9) 20%, rgba(21, 21, 22, 0.6) 80%), url("../images/bg-calculate.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 @media screen and (min-width: 768px) {
-  .useful__item-description--first {
-    bottom: 14rem;
+  .calculate {
+    padding: 3rem 0;
   }
 }
 @media screen and (min-width: 1200px) {
-  .useful__item-description--first {
-    bottom: 10rem;
-    margin: 0 0.5rem;
+  .calculate {
+    padding: 4rem 0;
+  }
+}
+.calculate__title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #fff;
+  margin: 1rem auto;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+  .calculate__title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 2rem auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .calculate__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 3rem auto;
+  }
+}
+.calculate__description {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.62;
+  max-width: 60%;
+  margin: 0 auto 1rem;
+  color: #fff;
+}
+@media screen and (min-width: 768px) {
+  .calculate__description {
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .calculate__description {
+    margin-bottom: 3rem;
+  }
+}
+
+.notarial-services {
+  text-align: center;
+  padding: 4rem 0;
+}
+.notarial-services__title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #1f2732;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+  .notarial-services__title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .notarial-services__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+  }
+}
+.notarial-services__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: minmax(20rem, auto) minmax(10rem, auto) minmax(10rem, auto);
+  grid-gap: 1rem;
+}
+.notarial-services__grid :nth-child(1) {
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+@media screen and (min-width: 768px) {
+  .notarial-services__grid {
+    grid-gap: 1.5rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .notarial-services__grid {
+    grid-gap: 2rem;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: minmax(10rem, auto) minmax(10rem, auto);
+  }
+  .notarial-services__grid :nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: -1;
+  }
+}
+.notarial-services__item {
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border: 1px solid #D9D9D9;
+  border-radius: 1rem;
+  transform: scale(1);
+  transition: transform 250ms;
+}
+@media screen and (min-width: 768px) {
+  .notarial-services__item {
+    padding: 1.5rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .notarial-services__item {
+    padding: 2rem;
+  }
+}
+.notarial-services__item:hover, .notarial-services__item:focus {
+  transform: scale(1.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+.notarial-services__item--data {
+  font-size: 0.8rem;
+}
+.notarial-services__item--data-first {
+  margin-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .notarial-services__item--data-first {
+    margin-top: 2rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .notarial-services__item--data-first {
+    margin-top: 3rem;
+  }
+}
+.notarial-services__item--title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 2rem 0;
+  color: #1f2732;
+}
+.notarial-services__item--title-first {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1f2732;
+  margin-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .notarial-services__item--title-first {
+    margin-top: 3rem;
+  }
+}
+.notarial-services__item--description {
+  font-size: 0.8rem;
+}
+.notarial-services__item--description-first {
+  margin-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .notarial-services__item--description-first {
+    margin-top: 2rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .notarial-services__item--description-first {
+    margin-top: 3rem;
   }
 }/*# sourceMappingURL=main.css.map */

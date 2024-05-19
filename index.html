@@ -10,7 +10,7 @@
     <section class="about">
       <div class="container">
         <div class="about__flex-box">
-          <div class="about__left"></div>
+          <div class="about__left"><img class="about__left--img" src="./images/about_banner.png" alt=""></div>
           <div class="about__right">
             <h2 class="about__right--title">Lorem ipsum dolor sit amet</h2>
             <p class="about__right--text">
@@ -84,16 +84,16 @@
         <h2 class="services__title">Нотариальные услуги</h2>
         <ul class="services__list">
           <li class="services__item">
-            <a class="services__link" target="_blank">
+            <a class="services__link" target="_blank">              
               <img
                 class="services__images"
                 src="./images/example.jpg"
                 alt="изображения блока нотариальные услуги"
               />
               <div class="services__item--title">
-                Lorem, ipsum dolor. Lorem, ipsum dolor. Lorem.
-                <div class="services__item--detail">детальнее...</div>
-              </div>
+                Lorem, ipsum dolor. Lorem, ipsum dolor. Lorem. 
+                <div class="services__item--detail">детальнее...</div>               
+              </div>              
             </a>
           </li>
           <li class="services__item">
@@ -247,7 +247,7 @@
         <h2 class="faq__title">Вопросы и ответы</h2>
         <ul class="faq__accordion">
           <li class="faq__accordion--item">
-            <input type="radio" name="accordion" id="first"/>
+            <input type="radio" name="accordion" id="first" />
             <label for="first"
               >Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               Officiis neque mollitia quidem necessitatibus quas, est et ipsum,
@@ -362,65 +362,132 @@
     <section class="useful">
       <div class="container">
         <div class="useful__flex-box">
-          <div>
-            <div class="useful__flex-box--wrap">
-              <p class="useful__description">Наш блог</p>
-              <button class="button button-submit" type="submit">
-                читать больше
-              </button>
-            </div>
-            <h2 class="useful__title">Полезно знать</h2>
-          </div>
-          <ul class="useful__list">
-            <li class="useful__item--first">             
-              <img
-                class="useful__background"
-                src="./images/useful-1.png"
-                alt="изображение блока полезно знать"
-              />
+          <p class="useful__description">Наш блог</p>
+          <a class="useful__link--second" href="">читать больше</a>
+        </div>
+        <h2 class="useful__title">Полезно знать</h2>
+        <div class="useful__grid">
+          <div class="useful__item--first">
+            <img
+              class="useful__background--first"
+              src="./images/useful-1.png"
+              alt="изображение блока полезно знать"
+            />
+            <div class="useful__item--wrap--first">
               <p class="useful__item-description--first">15 апреля</p>
               <h3 class="useful__item-title--first">
                 Как использовать закон в свою пользу
               </h3>
-              <button class="button button-submit" type="submit">читать</button>
-            </li>
-            <li class="useful__item">
-              <img
-                class="useful__background"
-                src="./images/useful-2.png"
-                alt="изображение блока полезно знать"
-              />
+            </div>
+            <a class="useful__link--first" href="">читать</a>
+            
+          </div>
+          <div class="useful__item">
+            <img
+              class="useful__background"
+              src="./images/useful-2.png"
+              alt="изображение блока полезно знать"
+            />
+            <div class="useful__item--wrap">
               <p class="useful__item-description">09 апреля</p>
               <h3 class="useful__item-title">
                 Библиотека юристов, что почитать?
               </h3>
-              <button class="button button-submit" type="submit">читать</button>
-            </li>
-            <li class="useful__item">
-              <img
-                class="useful__background"
-                src="./images/useful-3.png"
-                alt="изображение блока полезно знать"
-              />
+            </div>
+            <a class="useful__link" href="">читать</a>
+          </div>
+          <div class="useful__item">
+            <img
+              class="useful__background"
+              src="./images/useful-3.png"
+              alt="изображение блока полезно знать"
+            />
+            <div class="useful__item--wrap">
               <p class="useful__item-description">06 марта</p>
-              <h3 class="useful__item-title">
-                На что обращать внимание в документах?
-              </h3>
-              <button class="button button-submit" type="submit">читать</button>
-            </li>
-            <li class="useful__item">
-              <img
-                class="useful__background"
-                src="./images/useful-4.png"
-                alt="изображение блока полезно знать"
-              />
+              <h3 class="useful__item-title">На что обращать в документах?</h3>
+            </div>
+            <a class="useful__link" href="">читать</a>
+          </div>
+          <div class="useful__item">
+            <img
+              class="useful__background"
+              src="./images/useful-4.png"
+              alt="изображение блока полезно знать"
+            />
+            <div class="useful__item--wrap">
               <p class="useful__item-description">23 февраля</p>
               <h3 class="useful__item-title">
                 Залог успешных дел наших юристов
               </h3>
-              <button class="button button-submit" type="submit">читать</button>
-            </li>
-          </ul>
+            </div>
+            <a class="useful__link" href="">читать</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="calculate">
+      <div class="container">
+        <h2 class="calculate__title">рассчитайте стоимость своего проекта</h2>
+        <div class="calculate__description">
+          Ответьте на простые вопросы и получита расчет стоимости Вашего
+          дизайн-проекта, а также месяц фвторского надзора и комплектации в
+          подарок
+        </div>
+        <button class="button button-submit" type="submit">
+          узнать стоимость проекта
+        </button>
+      </div>
+    </section>
+    <section class="notarial-services">
+      <div class="container">
+        <h2 class="notarial-services__title">Услуги нотариуса</h2>
+        <div class="notarial-services__grid">
+          <div class="notarial-services__item">
+            <div class="notarial-services__item--data-first">19 мая</div>
+            <a class="notarial-services__item--title-first" href=""
+              >Lorem ipsum dolor sit.Lorem ipsum dolor sit.</a
+            >
+            <div class="notarial-services__item--description-first">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            </div>
+          </div>
+          <div class="notarial-services__item">
+            <div class="notarial-services__item--data">19 мая</div>
+            <a class="notarial-services__item--title" href=""
+              >Lorem ipsum dolor sit.</a
+            >
+            <div class="notarial-services__item--description">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            </div>
+          </div>
+          <div class="notarial-services__item">
+            <div class="notarial-services__item--data">19 мая</div>
+            <a class="notarial-services__item--title" href=""
+              >Lorem ipsum dolor sit.Lorem ipsum dolor sit.</a
+            >
+            <div class="notarial-services__item--description">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem
+              ipsum dolor sit amet consectetur, adipisicing elit.
+            </div>
+          </div>
+          <div class="notarial-services__item">
+            <div class="notarial-services__item--data">19 мая</div>
+            <a class="notarial-services__item--title" href=""
+              >Lorem ipsum dolor.</a
+            >
+            <div class="notarial-services__item--description">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            </div>
+          </div>
+          <div class="notarial-services__item">
+            <div class="notarial-services__item--data">19 мая</div>
+            <a class="notarial-services__item--title" href=""
+              >Lorem ipsum dolor sit.</a
+            >
+            <div class="notarial-services__item--description">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            </div>
+          </div>
         </div>
       </div>
     </section>

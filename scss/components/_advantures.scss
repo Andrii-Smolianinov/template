@@ -62,7 +62,7 @@
     padding: 1rem;
     margin-bottom: 30px;
     text-align: start;
-    border: 1px solid $border-advantures;
+    border: 1px solid $grey-border-color;
     border-radius: 1rem;
     background-color: $white-color;
     box-sizing: border-box;
@@ -89,7 +89,7 @@
 
   &__item-title {
     margin: 1rem 0;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 600;
     line-height: 1.18;
     text-transform: uppercase;
@@ -97,7 +97,7 @@
   }
 
   &__item-description {
-    font-size: 1.14rem;
+    font-size: 0.8rem;
     font-weight: 300;
     line-height: 1.12;
     color: $call-font-color;
