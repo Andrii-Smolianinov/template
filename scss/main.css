@@ -1938,85 +1938,76 @@ a {
 }
 
 .about {
-  background-image: linear-gradient(to right, #e3c37a 35%, #d7d7d7 35%, #d7d7d7 65%);
+  background: linear-gradient(to top, rgba(85, 85, 92, 0.1), rgba(55, 56, 63, 0.1)), url(../images/bg-about.png) left/50% 100% no-repeat #d7d7d7;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 768px) {
+  .about {
+    background: linear-gradient(to top, rgba(85, 85, 92, 0.1), rgba(55, 56, 63, 0.1)), url(../images/bg-about.png) left/30% 100% no-repeat #d7d7d7;
+    box-sizing: border-box;
+  }
 }
 .about__flex-box {
   display: flex;
+  flex-direction: column-reverse;
   align-items: center;
-  justify-content: center;
   width: 100%;
   height: 100%;
 }
-.about__left {
-  position: relative;
-  height: 20rem;
-  width: 15rem;
-  background-image: url("../images/bg-about.png");
-  background-repeat: no-repeat;
-}
-@media screen and (min-width: 481px) {
-  .about__left {
-    height: 27rem;
-    width: 20rem;
+@media screen and (min-width: 768px) {
+  .about__flex-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
   }
+}
+.about__left {
+  padding: 0;
 }
 @media screen and (min-width: 768px) {
   .about__left {
-    height: 34.25rem;
-    width: 24.25rem;
+    padding: 1rem 0 0 1rem;
   }
 }
-.about__left--img {
-  position: absolute;
-  bottom: 0;
-  height: 90%;
+@media screen and (min-width: 1200px) {
+  .about__left {
+    padding: 3rem 0 0 3rem;
+  }
 }
 .about__right {
-  width: 50%;
-  height: 100%;
-  margin-left: 1rem;
-  padding: 1rem 0;
-}
-@media screen and (min-width: 481px) {
-  .about__right {
-    margin-left: 1.5rem;
-    padding: 1.5rem 0;
-  }
+  padding: 1rem;
+  text-align: center;
 }
 @media screen and (min-width: 768px) {
   .about__right {
-    margin-left: 2rem;
-    padding: 2rem 0;
+    padding: 2rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .about__right {
+    padding: 3rem;
   }
 }
 .about__right--title {
-  text-align: center;
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 500;
   color: #1f2732;
-  margin-bottom: 1.5rem;
-  padding-right: 1.5rem;
   text-transform: uppercase;
 }
 @media screen and (min-width: 768px) {
   .about__right--title {
     font-size: 2rem;
     font-weight: 600;
-    margin-bottom: 2rem;
-    padding-right: 2rem;
+    margin-bottom: 1rem;
   }
 }
 @media screen and (min-width: 1200px) {
   .about__right--title {
     font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 3rem;
-    padding-right: 3rem;
+    margin-bottom: 2rem;
   }
-}
-.about__right--text {
-  font-size: 1rem;
-  padding: 0 0.5rem;
 }
 
 .advantures {
@@ -2198,13 +2189,12 @@ a {
     width: calc((100% - 120px) / 4);
   }
 }
-.services__item:hover .services__item--detail, .services__item:focus .services__item--detail {
-  display: block;
-  transform: opacity(1);
-}
 .services__item:hover .services__images, .services__item:focus .services__images {
   transform: scale(1.05);
   box-shadow: 10px 10px 8px 2px rgba(92, 116, 128, 0.3);
+}
+.services__item:hover .services__images .services__item--detail, .services__item:focus .services__images .services__item--detail {
+  transform: opacity(0);
 }
 .services__item:after {
   content: "";
@@ -2223,7 +2213,7 @@ a {
 }
 .services__item--title {
   position: absolute;
-  top: 4.5rem;
+  top: 2rem;
   width: 100%;
   text-align: center;
   font-size: 1.5rem;
@@ -2243,29 +2233,19 @@ a {
     font-size: 1.5rem;
   }
 }
+.services__images {
+  transform: scale(1);
+  transition: transform 250ms;
+}
 .services__item--detail {
-  display: none;
   position: absolute;
+  display: none;
   font-size: 1rem;
   top: -4rem;
   right: 1rem;
   color: #fff;
   z-index: 20;
-  transform: opacity(0.5);
-  transition: transform 250ms;
-}
-@media screen and (min-width: 768px) {
-  .services__item--detail {
-    top: -3rem;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .services__item--detail {
-    top: -4.7rem;
-  }
-}
-.services__images {
-  transform: scale(1);
+  transform: opacity(0);
   transition: transform 250ms;
 }
 
@@ -2698,16 +2678,19 @@ a {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #e3c37a;
-  border-radius: 0.5rem;
-  width: 6.9rem;
-  padding: 0.75rem 1.5rem;
+  border: 1px solid #edc114;
+  border-radius: 15px;
+  line-height: 1.6;
+  text-transform: capitalize;
+  text-align: center;
+  cursor: pointer;
+  padding: 0.5rem 1.2rem;
   color: black;
-  text-transform: uppercase;
+  transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .useful__link:hover,
 .useful__link :focus {
-  background-color: #e3c37a;
+  background-color: #edc114;
 }
 .useful__link--first {
   display: inline-flex;
@@ -2727,20 +2710,23 @@ a {
   background-color: #e3c37a;
   color: black;
 }
-.useful__link--second {
+.useful__link--read-more {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #e3c37a;
-  border-radius: 0.5rem;
-  width: 11.2rem;
-  padding: 0.75rem 1.5rem;
+  border: 1px solid #edc114;
+  border-radius: 15px;
+  line-height: 1.6;
+  text-transform: capitalize;
+  text-align: center;
+  cursor: pointer;
+  padding: 0.5rem 1.2rem;
   color: black;
-  text-transform: uppercase;
+  transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.useful__link--second:hover,
-.useful__link--second :focus {
-  background-color: #e3c37a;
+.useful__link--read-more:hover,
+.useful__link--read-more :focus {
+  background-color: #edc114;
 }
 
 .calculate {
@@ -2802,11 +2788,11 @@ a {
   }
 }
 
-.notarial-services {
+.news {
   text-align: center;
   padding: 4rem 0;
 }
-.notarial-services__title {
+.news__title {
   font-size: 1.5rem;
   font-weight: 400;
   color: #1f2732;
@@ -2814,48 +2800,48 @@ a {
   text-transform: uppercase;
 }
 @media screen and (min-width: 768px) {
-  .notarial-services__title {
+  .news__title {
     font-size: 2rem;
     font-weight: 600;
     margin-bottom: 2rem;
   }
 }
 @media screen and (min-width: 1200px) {
-  .notarial-services__title {
+  .news__title {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 3rem;
   }
 }
-.notarial-services__grid {
+.news__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: minmax(20rem, auto) minmax(10rem, auto) minmax(10rem, auto);
   grid-gap: 1rem;
 }
-.notarial-services__grid :nth-child(1) {
+.news__grid :nth-child(1) {
   grid-column-start: 1;
   grid-column-end: -1;
 }
 @media screen and (min-width: 768px) {
-  .notarial-services__grid {
+  .news__grid {
     grid-gap: 1.5rem;
   }
 }
 @media screen and (min-width: 1200px) {
-  .notarial-services__grid {
+  .news__grid {
     grid-gap: 2rem;
     grid-template-columns: 2fr 1fr 1fr;
     grid-template-rows: minmax(10rem, auto) minmax(10rem, auto);
   }
-  .notarial-services__grid :nth-child(1) {
+  .news__grid :nth-child(1) {
     grid-column-start: 1;
     grid-column-end: 1;
     grid-row-start: 1;
     grid-row-end: -1;
   }
 }
-.notarial-services__item {
+.news__item {
   text-align: start;
   display: flex;
   flex-direction: column;
@@ -2866,65 +2852,159 @@ a {
   transition: transform 250ms;
 }
 @media screen and (min-width: 768px) {
-  .notarial-services__item {
+  .news__item {
     padding: 1.5rem;
   }
 }
 @media screen and (min-width: 1200px) {
-  .notarial-services__item {
+  .news__item {
     padding: 2rem;
   }
 }
-.notarial-services__item:hover, .notarial-services__item:focus {
+.news__item:hover, .news__item:focus {
   transform: scale(1.05);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
-.notarial-services__item--data {
+.news__item--data {
   font-size: 0.8rem;
 }
-.notarial-services__item--data-first {
+.news__item--data-first {
   margin-top: 1rem;
 }
 @media screen and (min-width: 768px) {
-  .notarial-services__item--data-first {
+  .news__item--data-first {
     margin-top: 2rem;
   }
 }
 @media screen and (min-width: 1200px) {
-  .notarial-services__item--data-first {
+  .news__item--data-first {
     margin-top: 3rem;
   }
 }
-.notarial-services__item--title {
+.news__item--title {
   font-size: 1.2rem;
   font-weight: 600;
   margin: 2rem 0;
   color: #1f2732;
 }
-.notarial-services__item--title-first {
+.news__item--title-first {
   font-size: 1.2rem;
   font-weight: 600;
   color: #1f2732;
   margin-top: 1rem;
 }
 @media screen and (min-width: 768px) {
-  .notarial-services__item--title-first {
+  .news__item--title-first {
     margin-top: 3rem;
   }
 }
-.notarial-services__item--description {
+.news__item--description {
   font-size: 0.8rem;
 }
-.notarial-services__item--description-first {
+.news__item--description-first {
   margin-top: 1rem;
 }
 @media screen and (min-width: 768px) {
-  .notarial-services__item--description-first {
+  .news__item--description-first {
     margin-top: 2rem;
   }
 }
 @media screen and (min-width: 1200px) {
-  .notarial-services__item--description-first {
+  .news__item--description-first {
     margin-top: 3rem;
   }
+}
+
+.notary-services {
+  text-align: start;
+  margin: 0;
+  padding: 2rem 0;
+  background-color: #f6f4f5;
+  background-repeat: no-repeat;
+  background-position: bottom 0px right;
+}
+@media screen and (min-width: 768px) {
+  .notary-services {
+    padding: 3rem 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .notary-services {
+    padding: 4rem 0;
+  }
+}
+.notary-services__title {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #1f2732;
+  margin: 0 auto 1.5rem;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+  .notary-services__title {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .notary-services__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+  }
+}
+.notary-services__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+@media screen and (min-width: 768px) {
+  .notary-services__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .notary-services__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.notary-services__item {
+  padding: 1rem;
+  margin-bottom: 30px;
+  text-align: start;
+  border: 1px solid #D9D9D9;
+  border-radius: 1rem;
+  background-color: #fff;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .notary-services__item {
+    margin: 15px;
+    width: calc((100% - 30px) / 1);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .notary-services__item {
+    width: calc((100% - 90px) / 3);
+  }
+}
+.notary-services__item-title {
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.18;
+  text-transform: uppercase;
+  color: #1f2732;
+}
+.notary-services__item-description {
+  font-size: 0.8rem;
+  font-weight: 300;
+  line-height: 1.12;
+  color: #1f2732;
 }/*# sourceMappingURL=main.css.map */

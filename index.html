@@ -10,7 +10,13 @@
     <section class="about">
       <div class="container">
         <div class="about__flex-box">
-          <div class="about__left"><img class="about__left--img" src="./images/about_banner.png" alt=""></div>
+          <div class="about__left">
+            <img
+              class="about__left--img"
+              src="./images/about_banner.png"
+              alt=""
+            />
+          </div>
           <div class="about__right">
             <h2 class="about__right--title">Lorem ipsum dolor sit amet</h2>
             <p class="about__right--text">
@@ -19,13 +25,11 @@
             </p>
             <p class="about__right--text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatum minus eaque expedita? Eveniet impedit esse obcaecati,
-              dicta cum dolorem similique non?
+              Voluptatum minus eaque expedita? Eveniet impedit esse obcaecati
             </p>
             <p class="about__right--text">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatum minus eaque expedita? Eveniet impedit esse obcaecati,
-              dicta cum dolorem similique non? Natus
+              Voluptatum minus eaque expedita? Eveniet impedit esse obcaecati
             </p>
           </div>
         </div>
@@ -84,16 +88,16 @@
         <h2 class="services__title">Нотариальные услуги</h2>
         <ul class="services__list">
           <li class="services__item">
-            <a class="services__link" target="_blank">              
+            <a class="services__link" target="_blank">
               <img
                 class="services__images"
                 src="./images/example.jpg"
                 alt="изображения блока нотариальные услуги"
               />
               <div class="services__item--title">
-                Lorem, ipsum dolor. Lorem, ipsum dolor. Lorem. 
-                <div class="services__item--detail">детальнее...</div>               
-              </div>              
+                Lorem, ipsum dolor. Lorem, ipsum dolor. Lorem.
+              </div>
+              <div class="services__item--detail">детальнее...</div>
             </a>
           </li>
           <li class="services__item">
@@ -363,7 +367,7 @@
       <div class="container">
         <div class="useful__flex-box">
           <p class="useful__description">Наш блог</p>
-          <a class="useful__link--second" href="">читать больше</a>
+          <a class="useful__link--read-more" href="">читать больше</a>
         </div>
         <h2 class="useful__title">Полезно знать</h2>
         <div class="useful__grid">
@@ -380,7 +384,6 @@
               </h3>
             </div>
             <a class="useful__link--first" href="">читать</a>
-            
           </div>
           <div class="useful__item">
             <img
@@ -438,57 +441,91 @@
         </button>
       </div>
     </section>
-    <section class="notarial-services">
+    <section class="news">
       <div class="container">
-        <h2 class="notarial-services__title">Услуги нотариуса</h2>
-        <div class="notarial-services__grid">
-          <div class="notarial-services__item">
-            <div class="notarial-services__item--data-first">19 мая</div>
-            <a class="notarial-services__item--title-first" href=""
+        <h2 class="news__title">новости</h2>
+        <div class="news__grid">
+          <div class="news__item">
+            <div class="news__item--data-first">19 мая</div>
+            <a class="news__item--title-first" href=""
               >Lorem ipsum dolor sit.Lorem ipsum dolor sit.</a
             >
-            <div class="notarial-services__item--description-first">
+            <div class="news__item--description-first">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             </div>
           </div>
-          <div class="notarial-services__item">
-            <div class="notarial-services__item--data">19 мая</div>
-            <a class="notarial-services__item--title" href=""
-              >Lorem ipsum dolor sit.</a
-            >
-            <div class="notarial-services__item--description">
+          <div class="news__item">
+            <div class="news__item--data">19 мая</div>
+            <a class="news__item--title" href="">Lorem ipsum dolor sit.</a>
+            <div class="news__item--description">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             </div>
           </div>
-          <div class="notarial-services__item">
-            <div class="notarial-services__item--data">19 мая</div>
-            <a class="notarial-services__item--title" href=""
+          <div class="news__item">
+            <div class="news__item--data">19 мая</div>
+            <a class="news__item--title" href=""
               >Lorem ipsum dolor sit.Lorem ipsum dolor sit.</a
             >
-            <div class="notarial-services__item--description">
+            <div class="news__item--description">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem
               ipsum dolor sit amet consectetur, adipisicing elit.
             </div>
           </div>
-          <div class="notarial-services__item">
-            <div class="notarial-services__item--data">19 мая</div>
-            <a class="notarial-services__item--title" href=""
-              >Lorem ipsum dolor.</a
-            >
-            <div class="notarial-services__item--description">
+          <div class="news__item">
+            <div class="news__item--data">19 мая</div>
+            <a class="news__item--title" href="">Lorem ipsum dolor.</a>
+            <div class="news__item--description">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             </div>
           </div>
-          <div class="notarial-services__item">
-            <div class="notarial-services__item--data">19 мая</div>
-            <a class="notarial-services__item--title" href=""
-              >Lorem ipsum dolor sit.</a
-            >
-            <div class="notarial-services__item--description">
+          <div class="news__item">
+            <div class="news__item--data">19 мая</div>
+            <a class="news__item--title" href="">Lorem ipsum dolor sit.</a>
+            <div class="news__item--description">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             </div>
           </div>
         </div>
+      </div>
+    </section>
+    <section class="notary-services">
+      <div class="container">
+        <h2 class="notary-services__title">услуги нотариуса</h2>
+        <ul class="notary-services__list">
+          <li class="notary-services__item">
+            <a href=""
+              ><h3 class="notary-services__item-title">
+                Круглосуточная поддержка
+              </h3>
+              <p class="notary-services__item-description">
+                Звонки по любым вопросам в удобное для вас время. Мы всегда
+                рядом
+              </p>
+            </a>
+          </li>
+          <li class="notary-services__item">
+            <a href=""
+              ><h3 class="notary-services__item-title">
+                Круглосуточная поддержка
+              </h3>
+              <p class="notary-services__item-description">
+                Звонки по любым вопросам в удобное для вас время. Мы всегда
+                рядом
+              </p>
+            </a>
+          </li>
+          <li class="notary-services__item">
+            <a href=""
+              ><h3 class="notary-services__item-title">
+                Круглосуточная поддержка
+              </h3>
+              <p class="notary-services__item-description">
+                Звонки по любым вопросам в удобное для вас время. Мы всегда
+                рядом
+              </p>
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
   </body>
