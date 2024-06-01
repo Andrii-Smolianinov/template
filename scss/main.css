@@ -2184,7 +2184,6 @@ a {
   cursor: pointer;
   overflow: hidden;
   border-radius: 0.5rem;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 768px) {
   .services__item {
@@ -2202,10 +2201,10 @@ a {
   transform: opacity(1);
 }
 .services__item:hover .services__images, .services__item:focus .services__images {
-  transform: scale(1.02);
+  transform: scale(1.05);
 }
 .services__item:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 }
 .services__item:after {
   content: "";
