@@ -1973,6 +1973,9 @@ a {
     padding: 3rem 0 0 3rem;
   }
 }
+.about__left img {
+  display: block;
+}
 .about__right {
   padding: 2rem;
   margin: auto 0;

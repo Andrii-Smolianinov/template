@@ -38,6 +38,10 @@
     @media screen and (min-width: 1200px) {
       padding: 3rem 0 0 3rem;
     }
+
+    img {
+      display: block;
+    }
   }
 
   &__right {
